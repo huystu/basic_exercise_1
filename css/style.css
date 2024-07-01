@@ -1,0 +1,238 @@
+/* GOOGLE FONT*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+
+}
+
+/* SOME VARIABLES*/
+:root {
+    --bg-color: #FFFFFF;
+    --text-color: #22100d;
+    --second-color: #685f78;
+    --third-color: #F67F45;
+    --main-color: #838C48;
+    --big-font: 3.8rem;
+    --h2-font: 2.6rem;
+    --p-font: 1.1rem;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 20px 13%;
+    transition: all .40s ease;
+}
+.logo img{
+    height: auto;
+    width: 100px;
+    max-width: 100%;
+}
+
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: var(--p-font);
+    padding: 10px 22px;
+    transition: all .40s ease;
+}
+
+/*NAVBAR CSS*/
+.navbar a:hover{
+    color: var(--main-color);
+}
+.header-icons{
+    display: flex;
+    align-items: center;
+}
+.header-icons i{
+    margin-left: 10px;
+    font-size: var(--p-font);
+    color: var(--text-color);
+    transition: all .40s ease;
+}
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.login-register {
+    display: flex;
+    align-items: center;
+}
+
+.login-register a {
+    text-decoration: none;
+    color: #000; 
+    margin: 0 5px;
+    font-size: 15px;
+}
+
+.login-register a:hover{
+    color: #F67F45;
+}
+
+.login-register .separator {
+    margin: 0 5px;
+}
+
+.cart {
+    margin-left: 20px; 
+    font-size: 15px;
+}
+
+.cart :hover{
+    color: #F67F45;
+}
+
+#menu-icon {
+    margin-left: 20px; 
+    cursor: pointer;
+    font-size: 34px;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown__menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: antiquewhite;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1100;
+}
+
+.dropdown__menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown__menu li {
+    padding: 10px 20px;
+    width: 200px;
+}
+
+.dropdown__menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown__menu a:hover {
+    background-color: var(--second-color);
+    color: antiquewhite;
+}
+
+.dropdown:hover .dropdown__menu {
+    display: block;
+}
+
+/*Home page*/
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.home-text {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.home-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.home-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom, rgba(254, 254, 234, 0.8), rgba(255, 255, 0, 0));
+    pointer-events: none;
+}
+
+.latter form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.latter input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--bg-color);
+    border-radius: 4px 0 0 4px; /* Rounded corners for the left side only */
+    border-right: none; /* Remove right border */
+    width: 300px; /* Adjust the width to make the input box longer */
+}
+
+.latter button {
+    padding: 10px;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-left: none; /* Remove left border */
+    border-radius: 0 4px 4px 0; /* Rounded corners for the right side only */
+    cursor: pointer;
+}
+
+.latter .bx-search {
+    color: var(--bg-color);
+    font-size: 20px; 
+}
+
+.sentence {
+    padding: 10px;
+    margin-top: 300px; /* Space between the search box and the sentence */
+    font-size: 18px; /* Adjust font size as needed */
+    color: white; /* Adjust color as needed */
+    text-align: center; /* Center the text */
+}
+
+
