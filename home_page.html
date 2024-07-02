@@ -20,55 +20,121 @@
             <img src="img/lms-logo.png">
         </a>
 
-        <ul class="navbar">
-            <li>
-                <a href="#home">HOME <i class="fas fa-caret-down"></i></a>
-                <div class="dropdown__menu">
-                    <ul>
-                        <li><a href="#">Home II</a></li>
-                        <li><a href="#">Home - Landing Page</a></li>
-                        <li><a href="#">Home - Subscription</a></li>
-                        <li><a href="#">Home - Course - Search</a></li>
-                        <li><a href="#">Zoom meeting</a></li>
-                        <li><a href="#">Points System</a></li>
-                    </ul>
-                </div>
+        <ul class="nav-links">
+            <li class="nav-item">
+              <a href="/">Home</a>
+              <div class="arrow-down"></div>
+              <div class="box-below-arrow"></div>
+              <ul class="submenu">
+                <li><a href="/home1">Home II</a></li>
+                <li><a href="/home2">Home - Landing Page</a></li>
+                <li><a href="/home3">Home - Subscription</a></li>
+                <li><a href="/home4">Home - Course-Search</a></li>
+                <li><a href="/home5">Zoom Meeting</a></li>
+                <li><a href="/home6">Home - Kids</a></li>
+                <li><a href="/home7">Points System</a></li>
+              </ul>
             </li>
-            <li><a href="#courses">COURSES</a></li>
-            <li><a href="#pages">PAGES</a></li>
-            <li><a href="#Blog">BLOG</a></li>
-            <li><a href="#Gallery">GALLERY</a></li>
-            <li><a href="#shop">SHOP</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
+            <li class="nav-item">
+              <a href="/courses">Courses</a>
+              <ul class="submenu">
+                <li><a href="/courses-template">Courses-Template</a></li>
+                <li><a href="/lessons">Lessons</a></li>
+                <li><a href="/search-course">Search Course</a></li>
+                <li><a href="/membership">Membership</a></li>
+                <li class="nav-item">
+                  <a href="/courses-detail">Courses Detail</a>
+                  <ul class="submenu submenu-left">
+                    <li><a href="/detail-type-1">Detail Type - 1</a></li>
+                    <li><a href="/detail-type-2">Detail Type - 2</a></li>
+                    <li><a href="/detail-type-3">Detail Type - 3</a></li>
+                    <li><a href="/detail-type-4">Detail Type - 4</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/pages">Pages</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
 
-        <div class="header-icons">
-            <div class="login-register">
-                <a href="#" class="login"><i class='bx bxs-user'></i> LOGIN</a>
-                <span class="separator">|</span>
-                <a href="#" class="register">REGISTER</a>
-            </div>
-            <a href="#" class="cart"><i class='bx bxs-cart'></i></a>
-            <div class="bx bx-menu" id="menu-icon"></div>
-        </div>
+          <div class="auth-cart">
+            <a href="#login" class="auth-link">Login</a>
+            <span class="separator">|</span>
+            <a href="#register" class="auth-link">Register</a>
+            <a href="#cart" class="cart-link">
+              <i class="fa fa-shopping-cart"></i>
+            </a>
+            <button class="menu-icon" onclick="toggleMenu()">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
     </header>
 
     <!--Home section-->
     <section class="home" id="home">
-        <div class="home-text ">
-            <div class ="latter">
-                <form>
-                    <input type="text" placeholder="Keywords" required>
-                    <button type="submit">
-                        <i class='bx bx-search'></i>
-                </form>
+        <div class="background">
+            <div class="banner">
+                <div class="banner-content">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Keyword">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <p class="banner-text">We have the largest collection of courses</p>
+                    <a href="#" class="view-courses-btn">View All Courses &raquo;</a>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="count" data-target="332">0</div>
+                            <p>Courses</p>
+                        </div>
+                        <div class="stat">
+                            <div class="count" data-target="1403">0</div>
+                            <p>Members</p>
+                        </div>
+                        <div class="stat">
+                            <div class="count" data-target="60">0</div>
+                            <p>Authors</p>
+                        </div>
+                        <div class="stat">
+                            <div class="count" data-target="120">0</div>
+                            <p>Subjects</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        <!--<div class="quote">
-                ashfaldj
-            </div>---->
         <div class="home-img">
             <img src="img/header.jpg" >
         </div>
+
+        <script>
+        // JavaScript for counting animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.count');
+            const speed = 200; // The lower the number, the faster the counting animation
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+
+                    // Lower increment to make counting slower
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCount();
+            });
+        });
+    </script>
+
     </section>
 
     <!--COURSES SECTION-->
