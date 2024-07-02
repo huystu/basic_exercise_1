@@ -40,6 +40,11 @@ header{
     padding: 20px 13%;
     transition: all .40s ease;
 }
+
+header.hidden {
+  top: -100px; /* Adjust this value to the height of your header */
+}
+
 .logo img{
     height: auto;
     width: 100px;
