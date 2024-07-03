@@ -54,8 +54,76 @@
                 </li>
               </ul>
             </li>
-            <li><a href="/pages">Pages</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li class="nav-item">
+              <a href="/pages">Pages</a>
+              <ul class="submenu">
+                <li class="nav-item">
+                  <a href="/buddy-page">Buddy Page</a>
+                  <ul class="submenu submenu-left">
+                    <li><a href="/members">Members</a></li>
+                    <li><a href="/side-wide-activity">Side-wide activity</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="/event">Event</a>
+                  <ul class="submenu submenu-left">
+                    <li><a href="/event-listing">Event Listing</a></li>
+                    <li><a href="/event-months">Event Listing</a></li>
+                    <li><a href="/event-day">Event Listing</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="/header">Header</a>
+                  <ul class="submenu submenu-left">
+                    <li><a href="/header_1">header-1</a></li>
+                    <li><a href="/header_2">header-2</a></li>
+                    <li><a href="/header_2">header-3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="/blog">Blog</a>
+              <ul class="submenu-4-columns">
+                <li>
+                    <a href="/blog-category-1">I Column</a>
+                    <ul>
+                        <li><a href="/blog-category-1/post1">Full Width</a></li>
+                        <li><a href="/blog-category-1/post2">With Left Side Bar</a></li>
+                        <li><a href="/blog-category-1/post3">With Right Side Bar</a></li>
+                        <li><a href="/blog-category-1/post4">With Pagination</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/blog-category-2">II Column</a>
+                    <ul>
+                        <li><a href="/blog-category-2/post1">Full Width</a></li>
+                        <li><a href="/blog-category-2/post2">With Left Side Bar</a></li>
+                        <li><a href="/blog-category-2/post3">With Right Side Bar</a></li>
+                        <li><a href="/blog-category-2/post4">With Pagination</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/blog-category-3">III Column</a>
+                    <ul>
+                        <li><a href="/blog-category-3/post1">Full Width</a></li>
+                        <li><a href="/blog-category-3/post2">With Left Side Bar</a></li>
+                        <li><a href="/blog-category-3/post3">With Right Side Bar</a></li>
+                        <li><a href="/blog-category-3/post4">With Pagination</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/blog-category-4">Thumb image</a>
+                    <ul>
+                        <li><a href="/blog-category-4/post1">Post 1</a></li>
+                        <li><a href="/blog-category-4/post2">Post 2</a></li>
+                    </ul>
+                </li>
+                <li class="menu-image">
+                    <img src="img/mega-menu-image-1.webp">
+                </li>
+              </ul>
+            </li>
             <li><a href="/gallery">Gallery</a></li>
             <li><a href="/shop">Shop</a></li>
             <li><a href="/contact">Contact</a></li>
@@ -109,32 +177,7 @@
             <img src="img/header.jpg" >
         </div>
 
-        <script>
-        // JavaScript for counting animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const counters = document.querySelectorAll('.count');
-            const speed = 200; // The lower the number, the faster the counting animation
-
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-
-                    // Lower increment to make counting slower
-                    const increment = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 1);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-
-                updateCount();
-            });
-        });
-    </script>
+        
 
     </section>
 
@@ -518,5 +561,6 @@
     <!--UPCOMING EVENTS-->
 
     <!--FOOTER-->
+<script src="script.js"></script>
 </body>
 </html>

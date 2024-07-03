@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
   list-style: none;
@@ -13,11 +13,11 @@
 
 /* SOME VARIABLES */
 :root {
-  --bg-color: #fdf6ea;
+  --bg-color: #FFFFFF;
   --text-color: #22100d;
   --second-color: #685f78;
-  --third-color: #f67f45;
-  --main-color: #838c48;
+  --third-color: #F67F45;
+  --main-color: #838C48;
   --big-font: 3.8rem;
   --h2-font: 2.6rem;
   --p-font: 14px;
@@ -27,6 +27,7 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
+
 header {
   position: fixed;
   width: 100%;
@@ -38,13 +39,19 @@ header {
   justify-content: space-between;
   background: transparent;
   padding: 20px 13%;
-  transition: all 0.4s ease;
+  transition: all .40s ease;
 }
+
+header.hidden {
+  top: -100px; /* Adjust this value to the height of your header */
+}
+
 .logo img {
   height: auto;
   width: 100px;
   max-width: 100%;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -54,10 +61,6 @@ header {
   background-color: #fdf6ea;
   font-family: var(--font-family); /* Replace with your font family variable */
   text-transform: uppercase;
-}
-
-.logo img {
-  height: auto;
 }
 
 .nav-links {
@@ -221,24 +224,111 @@ header {
   display: none;
 }
 
-.nav-links li:hover .arrow-down {
-  opacity: 1;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+  }
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+      display: none;
+  }
+  .nav-links.active {
+      display: flex;
+  }
+  .menu-icon {
+      display: block;
+  }
+  .auth-cart {
+      flex-direction: column;
+      align-items: center;
+  }
+  .auth-link,
+  .cart-link {
+      margin: 5px 0;
+  }
+  .banner {
+      padding: 10px;
+  }
+  .search-bar input[type="text"] {
+      width: 200px; /* Adjust width for smaller screens */
+  }
+  .stats {
+      flex-direction: column;
+  }
+  .stat {
+      margin: 10px 0;
+  }
 }
 
-.box-below-arrow {
+@media (max-width: 1024px) {
+  header {
+      padding: 20px 5%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Style for 4-column submenu */
+.submenu-4-columns {
+  display: none;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 10px 20px;
   position: absolute;
-  top: calc(100% + 5px);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 10px;
-  background-color: #fdf6ea;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  background: rgb(251, 244, 235);
+  box-shadow: 0 8px 16px rgba(255, 222, 113, 0.532);
+  z-index: 1000;
+  width: 950%;
 }
 
-.nav-links li:hover .box-below-arrow {
-  opacity: 1;
+.submenu-4-columns > li {
+  flex: 1;
+  padding: 10px;
+}
+
+.submenu-4-columns a {
+  display: block;
+  padding: 5px;
+  color: #000;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.submenu-4-columns a:hover {
+  background-color: #ffd67d;
+}
+
+.submenu-4-columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenu-4-columns ul li {
+  padding: 5px 0;
+}
+
+.submenu-4-columns .menu-image {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submenu-4-columns .menu-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure the submenu displays correctly when the parent is hovered */
+.nav-item:hover > .submenu-4-columns {
+  display: flex;
 }
 
 /* Home page */
@@ -285,11 +375,7 @@ header {
   left: 0;
   width: 100%;
   height: 20%;
-  background: linear-gradient(
-    to bottom,
-    rgba(254, 254, 234, 0.8),
-    rgba(255, 255, 0, 0)
-  );
+  background: linear-gradient(to bottom, rgba(254, 254, 234, 0.8), rgba(255, 255, 0, 0));
   pointer-events: none;
 }
 
@@ -318,7 +404,7 @@ header {
   padding-top: 200px;
 }
 
-.search-bar input[type='text'] {
+.search-bar input[type="text"] {
   flex: 1; /* Take remaining space */
   padding: 20px;
   border: none;
@@ -360,7 +446,7 @@ header {
   margin-top: 10px;
   font-size: 20px; /* Increase font size */
   font-weight: bold; /* Make text bold */
-  transform: scale(1); /* Scale up the size by 50% (1.5 times larger) */
+  transform: scale(1.0); /* Scale up the size by 50% (1.5 times larger) */
 }
 
 .view-courses-btn:hover {
@@ -408,7 +494,7 @@ header {
   left: 0;
   top: 100%;
   background-color: var(--bg-color);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 1100; /* Ensure dropdown is in front */
 }
 
@@ -434,20 +520,21 @@ header {
   color: #fff;
 }
 
-.dropdown-menu ul li:hover {
+.dropdown-menu ul li:hover{
   background-color: antiquewhite;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
 @keyframes countUp {
-  from {
-    opacity: 0;
-    transform: translateY(-50%);
+  from { 
+      opacity: 0;
+      transform: translateY(-50%);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
   }
 }
