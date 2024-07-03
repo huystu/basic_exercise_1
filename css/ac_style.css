@@ -1,3 +1,10 @@
+.container-course-implement {
+  display: flex;
+  justify-content: center;
+  width: 1180px;
+  margin: 0 auto;
+}
+
 #main {
   clear: both;
   display: block;
@@ -24,8 +31,6 @@ div.first-place {
 div.four-skills {
   display: flex;
   justify-content: space-between;
-  padding-left: 165px;
-  padding-right: 165px;
   margin-top: 100px;
 }
 
@@ -157,8 +162,6 @@ div.second-place {
 
 div.all-course {
   margin-top: 50px;
-  padding-left: 165px;
-  padding-right: 165px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
@@ -606,8 +609,6 @@ span.hiden-star {
 div.swiper-slide {
   display: flex;
   justify-content: space-between;
-  padding-left: 165px;
-  padding-right: 165px;
 }
 
 img.img-swiper {
@@ -719,6 +720,10 @@ img.img-swiper {
 
 /* Media queries for responsive behavior */
 @media (max-width: 795px) {
+  .container-course-implement {
+    width: 100%;
+  }
+
   h5 {
     font-size: 16px;
     margin-block-start: 1.67em;
@@ -852,22 +857,28 @@ img.img-swiper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Điều chỉnh kích thước view-course */
-    height: auto; /* Điều chỉnh kích thước view-course */
-    overflow: hidden; /* Đảm bảo chỉ hiển thị một swiper-slide */
+    width: 100%;
+    height: auto;
+    overflow: hidden;
   }
 
   div.swiper-slide {
-    width: 347px; /* Điều chỉnh kích thước swiper-slide */
-    height: 173px; /* Điều chỉnh kích thước swiper-slide */
+    width: 347px;
+    height: 173px;
     display: flex;
     padding-left: 5px;
     padding-right: 5px;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  div.swiper-slide::-webkit-scrollbar {
+    display: none;
   }
 
   img.img-swiper {
-    width: 347px; /* Điều chỉnh kích thước img-swiper */
-    height: 173px; /* Điều chỉnh kích thước img-swiper */
+    width: 347px;
+    height: 173px;
   }
 }
