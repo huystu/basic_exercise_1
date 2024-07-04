@@ -130,17 +130,39 @@
           </ul>
 
           <div class="auth-cart">
-            <a href="#login" class="auth-link">Login</a>
+            <a href="#" class="auth-link">Login</a>
             <span class="separator">|</span>
-            <a href="#register" class="auth-link">Register</a>
-            <a href="#cart" class="cart-link">
-              <i class="fa fa-shopping-cart"></i>
-            </a>
-            <button class="menu-icon" onclick="toggleMenu()">
-              <i class="fa fa-bars"></i>
-            </button>
-          </div>
+            <a href="#" class="auth-link">Register</a>
+            <a href="#" class="cart-link"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+        <button class="menu-icon">
+            <i class="fa fa-bars"></i>
+        </button>
+    </nav>
     </header>
+    <div class="offcanvas-menu" id="offcanvasMenu">
+      <span class="close-btn" onclick="toggleMenu()">&#10006;</span>
+      <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="nav-item dropdown">
+              <a href="#">Services</a>
+              <ul class="submenu submenu-4-columns">
+                  <li><a href="#">Service 1</a></li>
+                  <li><a href="#">Service 2</a></li>
+                  <li><a href="#">Service 3</a></li>
+                  <li><a href="#">Service 4</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="auth-cart">
+          <a href="#" class="auth-link">Login</a>
+          <span class="separator">|</span>
+          <a href="#" class="auth-link">Register</a>
+          <a href="#" class="cart-link"><i class="fa fa-shopping-cart"></i></a>
+      </div>
+  </div>
 
     <!--Home section-->
     <section class="home" id="home">
