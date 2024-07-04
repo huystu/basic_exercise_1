@@ -14,7 +14,9 @@
   width: 100%;
 }
 
-section {
+.for-course,
+.first-place,
+.third-place {
   unicode-bidi: isolate;
   border: 0;
   font-size: 100%;
