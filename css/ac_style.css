@@ -26,6 +26,68 @@
   vertical-align: baseline;
 }
 
+.button-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.btn-back-top .Btop {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #838c48;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 3px;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-back-top .Btop:hover {
+  background-color: #000000;
+  transform: rotate(360deg) scale(1.1);
+}
+
+.button-top.show {
+  opacity: 1;
+}
+
+.arrow-top {
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.arrow-course {
+  border: solid rgb(0, 0, 0);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
 div.first-place {
   height: 230px;
 }
@@ -89,13 +151,23 @@ div.button-pn {
   display: flex;
   justify-content: space-between;
   width: 100px;
-  height: 45px;
+  height: 46px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-div.btn-prev,
-div.btn-next {
+.section-for-course {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-prev,
+.btn-next {
   width: 45px;
   height: 45px;
   text-align: center;
@@ -103,9 +175,11 @@ div.btn-next {
   align-items: center;
 }
 
-a.Bprev,
-a.Bnext {
-  display: block;
+.Bprev,
+.Bnext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 45px;
   height: 45px;
   background-color: #fdf6ea;
@@ -121,8 +195,8 @@ a.Bnext {
   transition: background-color 0.5s, color 0.5s, border 0.5s;
 }
 
-a.Bprev:hover,
-a.Bnext:hover {
+.Bprev:hover,
+.Bnext:hover {
   background-color: #838c48;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -804,7 +878,7 @@ img.img-swiper {
     text-align: center;
     display: flex;
     justify-content: space-between;
-    width: 100px;
+    width: 105px;
     height: 45px;
     margin-right: 10px;
     margin-bottom: 10px;
