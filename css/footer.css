@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #fdf6ea;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
 footer {
   background-color: #F5E9D4;
   text-align: center;
@@ -48,6 +40,7 @@ footer {
   font-family: 'Raleway', sans-serif;
   color: #303030; /* Set link color */
   font-size: 20px; /* Set font size */
+  font-weight: normal;
 }
 
 .footer-column p,
@@ -63,6 +56,7 @@ footer {
   text-align: justify; /* Justify text alignment */
   line-height: 1.5; /* Adjust the line height to increase or decrease spacing */
   font-size: 14px;
+  font-weight: normal;
 }
 
 .footer-column a:hover {
@@ -84,16 +78,18 @@ footer {
 .footer-column.popular-courses h3 {
   margin-bottom: 15px;
   font-size: 20px; /* Set font size */
+  font-weight: normal;
 }
 
 .footer-column.popular-courses a {
   display: block; /* Make links block-level for better spacing */
   margin-top: 0px; /* Adjust margin for spacing */
-  margin-bottom: 5px; /* Adjust margin for spacing */
+  margin-bottom: 13px; /* Adjust margin for spacing */
   color: #303030; /* Set link color */
   text-decoration: none; /* Remove underline from links */
   font-size: 16px; /* Set font size */
   transition: color 0.5s ease; /* Add transition for color change */
+  font-weight: normal;
 }
 
 .footer-column.popular-courses a:hover {
@@ -103,9 +99,7 @@ footer {
 .footer-column.popular-courses a span {
   display: block; /* Make the span a block element to break to a new line */
   color: #838c48; /* Set color for "Free" */
-  font-size: 16px; /* Set font size */
-  margin-top: 10px;
-  pointer-events: none; /* Disable link */
+  font-size: 16px; /* Set font size */ 
 }
 
 .footer-column.popular-courses a:not(:last-child) {
@@ -133,6 +127,7 @@ footer {
   border-radius: 5px;
   transition: color 1s ease, background-color 1s ease;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .btn:hover {
@@ -151,6 +146,7 @@ footer {
   display: block; /* Make the anchor an inline-block element */
   margin-top: 20px; /* Adjust margin between links */
   margin-bottom: 30px; /* Adjust margin between links */
+  font-weight: normal;
 }
 
 .footer-column.quick-links a:not(:last-child)::after {
@@ -187,6 +183,7 @@ footer {
   display: block; /* Make links block-level for better spacing */
   text-align: justify; /* Justify text alignment */
   line-height: 1.5; /* Adjust the line height to increase or decrease spacing */
+  font-weight: normal;
 }
 
 .footer-column.contact-us a i.Icons {
@@ -252,6 +249,7 @@ footer {
   background-color: #838c48;
   height: 90px;
   color: #fff;
+  font-weight: lighter;
   font-size: 14px;
   max-width: 100%; /* Ensure it doesn't exceed the width of its container */
   margin: 0 auto;
@@ -268,6 +266,7 @@ footer {
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
   margin: 10px 0; /* Margin for spacing between elements */
+  font-size: 16px;
 }
 
 .footer-info {
@@ -276,8 +275,9 @@ footer {
 
 .footer-social-icons {
   flex: 2; /* Take available space */
-  justify-content: flex-end; /* Align social icons to the right */
+  justify-content: center; /* Align social icons to the right */
   gap: 10px; /* Adjust gap between icons */
+
 }
 
 .footer-social-icons a {
@@ -306,6 +306,7 @@ a[href="https://wedesigntech.com/"] {
 
 .footer-info {
   text-align: left;
+  font-weight: lighter;
 }
 
 .info-list {
