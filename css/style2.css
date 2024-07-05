@@ -1,0 +1,711 @@
+/*-----------------------------------*\
+ * #GET IN TOUCH WITH US (GTU)
+\*-----------------------------------*/
+.gtu {
+    background-image: url(https://dtlmselementor.wpengine.com/wp-content/uploads/2023/11/newsletter-parallax.png);
+    background-color: #da853d;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-block: 90px;
+  }
+  
+
+  .gtu .container { max-width: 1100px; }
+  .gtu { 
+    text-align: center; 
+    justify-content: center;
+}
+
+  .gtu-form {
+    margin-inline: 0;
+    max-width: unset;
+    width: 100%;
+  }
+
+.gtu .title-wrapper { 
+    margin-bottom: 0; 
+    padding: 0px 0px 30px 0px;
+    width: 100%;
+}
+  
+.gtu-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    justify-items: center;
+    line-height: 1.2;
+    padding: 0px 0px 10px 0px;
+}
+  
+.gtu-text {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.72;
+    text-align: center;
+    padding: 0% 5% 0% 5%;
+
+}
+.email-field {
+    font-size: 14px;
+    width: 35%;
+    height: 60px;
+    outline: none;
+}
+
+.gtu .email-field {
+    font-family: "Open Sans", sans-serif;
+    color: #303030;
+    font-size: 14px;
+    border-radius: 4px;  
+    border-color: white;
+    outline-color: white;
+    outline: none;
+    box-shadow: none;
+    fill: white;
+    padding-left: 1%;
+}
+
+
+.gtu .email-field::placeholder{
+    color: rgb(188, 188, 188);
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.gtu-form {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    margin-left: 50%;
+    margin-inline: auto;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;  
+  }
+
+.gtu .email-field { margin-bottom: 0; }
+
+.gtu-form-btn {
+    position: absolute;
+    
+}
+.gtu-form-btn {
+    font-family: "Open Sans", sans-serif;
+    border-color: #FFFFFF;
+    background: #838c48;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #838C48;
+    padding: 16px 20px;
+    border-radius: 1px;
+    margin-inline: auto;
+    transition: 0.3;
+    text-align: center;
+    position: relative;
+    margin: 0 0px 0 -10px;
+}
+  
+.gtu-form-btn:is(:hover, :focus) {
+    background: black;
+    color: white; 
+
+}  
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.gtu {
+    animation-name: fadeIn;
+    animation-duration: 1.25s;
+}
+@keyframes fadeInDown{
+    from{
+        opacity:0;
+        transform:translate3d(0,-20%,0)
+    }
+    to{
+        opacity:1;
+        transform:none
+    }
+}
+.fade-in-down-text{
+    animation-name:fadeInDown;
+    animation-duration: 1.25s;
+
+}
+
+/*-----------------------------------*\
+ * #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for large than 550px screen
+ */
+
+@media (min-width: 550px) {
+
+    /**
+     * CUSTOM PROPERTY
+     */
+  
+    :root {
+  
+      /**
+       * typography
+       */
+  
+      --fs-1: 42px;
+  
+    }
+  
+  
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .container {
+      max-width: 540px;
+      margin-inline: auto;
+    }
+/* Thêm media query để điều chỉnh cho di động */
+@media (max-width: 768px) {
+    .gtu-text {
+        padding-left: 5%; /* Điều chỉnh khoảng cách bên trái cho di động */
+    }
+    .email-field {
+        width: 100%; /* Điều chỉnh chiều rộng của trường email cho di động */
+    }
+    .gtu-form-btn {
+        margin: 10px 0; /* Điều chỉnh khoảng cách giữa nút và trường email cho di động */
+    }
+} 
+}
+
+/*-----------------------------------*\
+ * #Our Process
+\*-----------------------------------*/
+body {
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    background-color: #fdf6eac9;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.our-process-title {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: #303030;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin-left: 30px;
+    animation-name: fadeInDown;
+    animation-duration: 1.25s
+}
+.line {
+    display: flex;
+    width: 40px;
+    height: 4px;
+    background-color: #838c48;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-right: 692px;
+}
+.ourProcessSteps{
+    margin: 70px;
+}
+
+.ourProcessStepsLeft{
+    margin-left: 2%;
+}
+
+.ourProcessStep1{
+    width: 50%;
+    --widgets-spacing: 20px 20px;
+    padding: 0;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    animation-name: fadeInLeft;
+    animation-duration: 1.25s;
+    transition: border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+    padding-top: 80px;
+}
+
+.ourProcessStep1::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 6px solid #f5e9d4;
+    border-radius: 50%;
+    background: #da853d;
+    right: -12px;
+    top: -4px;
+    box-sizing: border-box !important;
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+.ourProcessStep1::after{
+    content: '';
+    position: absolute;
+    right: -4px;
+    width: 10px;
+    height: 100px;
+    border-right: 10px solid #f5e9d4;
+    top: 0;
+    z-index: -1;
+    box-sizing: border-box !important;
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+.ourProcessStep1Wrapper{
+    text-align: end;
+    justify-items: end;
+    margin-right: 30px;
+    padding-right: 10px;
+    transition: 0.3s linear 0s;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.ourProcessStep1Wrapper::before{
+    right: -43px;
+    content: '';
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fdf6ea;
+    border: 6px solid #f5e9d4;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    text-decoration: inherit;
+    vertical-align: inherit;
+    text-align: end;
+}
+
+.ourProcessStep1Wrapper::after{
+    content: '';
+    position: absolute;
+    right: -34px;
+    width: 10px;
+    height: 100%;
+    background: #f5e9d4;
+    top: 0;
+    box-sizing: border-box !important;
+    text-decoration: inherit;
+    vertical-align: inherit;
+    text-align: end;
+}
+
+.ourProcessStep1Title{
+    margin-bottom: 20px;
+    position: relative;
+    transition: 0.3s linear 0s;
+    text-align: end;
+}
+
+.step1Title{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.step1Title h5{
+    font-size: 30px;
+    font-weight: 600;
+    color: #da853d;
+    display: block;
+    margin-top: -8px;
+    margin-bottom: 0;
+    text-transform: none;
+    transition: 0.3s linear 0s;
+    font-family: 'Raleway', sans-serif;
+}
+
+.step1Subtitle{
+    margin-top: -15px;
+    width: 100%;
+    letter-spacing: 0;
+    font-weight: 500;
+    border-bottom: 1px solid #f5e9d4;
+    padding-bottom: 20px;
+    font-size: 21px;
+    color: #54595f;
+}
+
+.ourProcessDetail{
+    position: relative;
+    transition: 0.3s linear 0s;
+}
+
+.ourProcessDetailContentGroup{
+    display: flex;
+    align-items: self-start;
+    position: relative;
+    z-index: 0;
+    transition: inherit;
+}
+
+.ourProcessDescription{
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 0;
+    transition: 0.3s linear 0s;
+    color: #808080;
+}
+
+.ourProcessIconWrapper{
+    display: inline-flex;
+    justify-content: inherit;
+}
+
+.ourProcessIcon{
+    height: 41px;
+    justify-content: end;
+    margin: 5px 0px 10px 25px;
+    display: inline-flex;
+}
+
+.ourProcessIcon span{
+    color: #DA835D;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 1em;
+    line-height: 1;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 1em;
+    z-index: 0;
+    transition: 0.3s linear 0s;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    --widgets-spacing: 20px 20px
+}
+
+.ourProcessIcon i{
+    color: inherit;
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    position: relative;
+    vertical-align: top;
+    width: 1em;
+    font-style: italic;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+.ourProcessIcon svg{
+    fill: currentColor;
+    height: 1em;
+    width: 1em; 
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.ourProcessStep2{
+    --widgets-spacing: 20px 20px;
+    --swiper-theme-color: #000;
+    --swiper-navigation-size: 44px;
+    --swiper-pagination-bullet-size: 6px;
+    --swiper-pagination-bullet-horizontal-gap: 6px;
+    position: relative;
+    min-height: 1px;
+    display: flex;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    animation-name: fadeInRight;
+    animation-duration: 1.25s;
+    transition: border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+}
+
+.ourProcessStep2Wrapper{
+    text-align: start;
+    justify-items: start;
+    margin-left: 30px;
+    padding-left: 10px;
+    transition: 0.3s linear 0s;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.ourProcessStep2Wrapper::before{
+    left: -45px;
+    content: '';
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fdf6ea;
+    border: 6px solid #f5e9d4;
+    top: -2%;
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box !important;
+    text-decoration: inherit;
+    vertical-align: inherit;
+    text-align: start;
+}
+
+.ourProcessStep2Title{
+    margin-bottom: 20px;
+    position: relative;
+    transition: 0.3s linear 0s;
+}
+
+.step2Title{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.step2Title h5{
+    font-size: 30px;
+    font-weight: 600;
+    color: #da853d;
+    display: block;
+    margin-top: -8px;
+    margin-bottom: 0;
+    text-transform: none;
+    transition: 0.3s linear 0s;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+.step2Subtitle{
+    margin-top: -15px;
+    width: 100%;
+    letter-spacing: 0;
+    font-weight: 500;
+    border-bottom: 1px solid #f5e9d4;
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #54595F;
+}
+
+.ourProcessDetail2{
+    position: relative;
+    transition: 0.3s linear 0s;
+}
+
+.ourProcessDetailContentGroup2{
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: self-start;
+    position: relative;
+    z-index: 0;
+    transition: inherit;
+}
+
+.ourProcessDescription2{
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 0;
+    transition: 0.3s linear 0s;
+    color: #808080;
+}
+
+.ourProcessIconWrapper2{
+    display: inline-flex;
+    justify-content: inherit;
+}
+
+.ourProcessIcon2{
+    margin: 5px 25px 10px 0px;
+    height: 41px;
+    justify-content: end;
+    display: inline-flex
+}
+
+.ourProcessIcon2 span{
+    color: #da853d;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 1em;
+    line-height: 1;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 1em;
+    z-index: 0;
+    transition: 0.3s linear 0s;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box !important;
+}
+
+.ourProcessIcon2 i{
+    color: inherit;
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    position: relative;
+    vertical-align: top;
+    width: 1em;
+    font-style: italic;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+.ourProcessIcon2 svg{
+    fill: currentColor;
+    height: 1em;
+    width: 1em;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.ourProcessStep2Wrapper::after{
+    content: '';
+    position: absolute;
+    left: -36px;
+    width: 10px;
+    height: 100%;
+    background: #f5e9d4;
+    top: 0;
+    box-sizing: border-box !important;
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+.ourProcessStep3{
+    width: 50%;
+    --widgets-spacing: 20px 20px;
+    padding: 0;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    animation-name: fadeInLeft;
+    animation-duration: 1.25s;
+    transition: border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+}
+
+.ourProcessStep4{
+    --widgets-spacing: 20px 20px;
+    --swiper-theme-color: #000;
+    --swiper-navigation-size: 44px;
+    --swiper-pagination-bullet-size: 6px;
+    --swiper-pagination-bullet-horizontal-gap: 6px;
+    position: relative;
+    min-height: 1px;
+    display: flex;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    animation-name: fadeInRight;
+    animation-duration: 1.25s;
+    transition: border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+}
+
+.ourProcessStep4::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 6px solid #f5e9d4;
+    border-radius: 50%;
+    background: #da853d;
+    left: -14px;
+    bottom: -6px;
+    box-sizing: border-box !important;
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+@keyframes fadeInLeft{
+    from{
+        opacity:0;
+        transform:translate3d(-20%,0,0)
+    }
+    to{
+        opacity:1;
+        transform:none
+    }
+}
+
+@keyframes fadeInRight{
+    from{
+        opacity:0;
+        transform:translate3d(20%,0,0)
+    }
+    to{
+        opacity:1;
+        transform:none
+    }
+}
+
+.ourProcessStep1,
+.ourProcessStep3 {
+    animation-name: fadeInLeft;
+}
+.ourProcessStep2,
+.ourProcessStep4 {
+    animation-name: fadeInRight;
+}
