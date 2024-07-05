@@ -1,0 +1,549 @@
+body {
+    box-sizing: border-box;
+    background-color: #fdf6ea;
+}
+@media screen {
+    .container-fluid {
+        background-color: #fdf6ea;
+    }
+    .blogTitle {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .line {
+        width: 40px;
+        height: 4px;
+        background-color: #838c48;
+        margin: 0 auto;
+    }
+    
+    .wrapper-blog {
+        padding-top: 50px;
+    }
+    
+    .blogImageAndContent {
+        width: 270.5px;
+        float: left;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .blogImageAndContent:hover .blogContent {
+        opacity: 1;
+        color: #fdf6ea;
+        transition-duration: 1s;
+    }
+    
+    .blogImageAndContent:hover .blogImage1 {
+        transform: scale(1.10);
+        transform-origin: top left;
+        transition-duration: 1s;
+    }
+    
+    .blogImageAndContent:hover .blogContentParagraph {
+        transform: translateY(-1rem);
+        transition: transform 0.2s ease;
+    }
+    
+    .blogImage1 {
+        width: 100%;
+        float: left;
+        margin: 0;
+        padding: 0;
+        z-index: 0;
+        transform: scale(1.20);
+        transition-duration: 1s;
+    }
+    
+    .blogContent {
+        position: absolute;
+        opacity: 0;
+        background: transparent;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .75) 100%);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fdf6ea;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 20%;
+        transition: opacity 1s ease;
+    }
+    
+    .blogImageAndContent .blogContentParagraph {
+        transform: translateY(1rem);
+        transition: transform 1s ease;
+    }
+    
+    .blogContentParagraph {
+        background: transparent;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+    
+    .blogDate {
+        border: 2px solid #201c1d;
+        border-radius: 3px 3px 3px 3px;
+        margin-top: 30px;
+    }
+    
+    .blogDateContent {
+        font-size: 17px;
+        font-weight: 600;
+        padding-top: 10px;
+        text-align: center;
+        color: #303030;
+        height: fit-content;
+        margin-bottom: 0.5rem;
+    }
+    
+    .icon-format {
+        height: auto;
+        width: 100%;
+        color: #838c48;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 22px;
+        padding: 3px 0 3px 0;
+        border-top: 2px solid #303030;
+        width: auto;
+    }
+    
+    .icon-format:hover {
+        color: #d6823a;
+    }
+    
+    .blogGroup {
+        margin-top: 30px;
+        color: #808080;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+    .blogGroupTitle {
+        width: auto;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        position: relative;
+        top: -5px;
+        word-break: break-all;
+        margin-bottom: 10px;
+        margin: 0;
+        text-transform: none;
+        overflow-wrap: anywhere;
+        transition: all 0.3s linear 0s;
+        font-family: 'Raleway', sans-serif;
+        color: #303030;
+        margin-right: 18%;
+        margin-bottom: 3%;
+    }
+    
+    .blogGroupTitle:hover .blogGroupTitleLink {
+        color: #de8235;
+    }
+    
+    .blogGroupTitleLink {
+        color: #303030;
+        font-weight: 600;
+        text-decoration: none;
+        overflow-wrap: anywhere;
+        display: inline-block;
+        float: none;
+        box-shadow: none;
+        transition: all 0.3s linear 0s;
+    }
+    
+    .blogGroupAuthor {
+        color: #808080;
+        font-size: 15px;
+        font-weight: normal;
+        text-decoration: none;
+        box-shadow: none;
+        transition: all 0.3s linear 0s;
+    }
+    
+    .blogGroupAuthor:hover {
+        color: #de8235;
+    }
+    
+    .blogGroupTag {
+        position: relative;
+        font-weight: 600;
+        display: inline-block;
+        width: auto;
+        margin: 8px 20px 5px 0px;
+        word-break: break-all;
+        transition: all 0.3s linear 0s;
+    }
+    
+    .bi-bookmark-fill {
+        font-size: 11px;
+    }
+    
+    .tag1 .tag2 {
+        color: #808080;
+        font-size: 14px;
+        font-weight: normal;
+        position: relative;
+        white-space: nowrap;
+        transition: all 0.3s linear 0s;
+    }
+    
+    .tag1 {
+        text-decoration: none;
+        color: #808080;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+    .tag1:hover {
+        color: #de8235;
+    }
+    
+    .tag2 {
+        text-decoration: none;
+        color: #808080;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+    .tag2:hover {
+        color: #de8235;
+    }
+    
+    .blogGroupTitle1 {
+        width: auto;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        position: relative;
+        top: -5px;
+        word-break: break-all;
+        margin-bottom: 10px;
+        margin: 0;
+        text-transform: none;
+        overflow-wrap: anywhere;
+        transition: all 0.3s linear 0s;
+        font-family: 'Raleway', sans-serif;
+        color: #303030;
+        margin-right: 15%;
+        margin-bottom: 3%;
+    }
+    
+    .blogGroupTitle1:hover .blogGroupTitleLink {
+        color: #de8235;
+    }
+    
+    .colFirst {
+        margin-left: 5%;
+        margin-right: -40px;
+    }
+    
+    .colThird {
+        margin-left: -40px;
+    }
+    
+    .blogElementImage {
+        background-image: url(https://dtlmselementor.wpengine.com/wp-content/uploads/2023/11/parallax-light.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0px 100px 0px;
+    }
+    
+    .blogElement {
+        max-width: 1170px;
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+    }
+    
+    .blogIconElement {
+        background: transparent;
+        border: 0;
+        font-size: 100%;
+        margin: 0;
+        outline: 0;
+        padding: 0;
+        vertical-align: baseline;
+    }
+    
+    .iconAndName {
+        position: relative;
+    }
+    
+    .blogIconElement span {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        color: #ffff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        line-height: 1;
+        padding: 5px;
+        position: relative;
+        text-align: center;
+        vertical-align: top;
+        z-index: 0;
+    }
+    
+    .iconHTMLSpan {
+        background-color: #F2672E;
+    }
+    
+    
+    .iconCSSSpan {
+        background-color: #0171BB;
+    }
+    
+    .iconAndroidSpan {
+        background-color: #9FBF3A;
+    }
+    
+    .iconPhotoshopSpan {
+        background-color: #2B8BC0;
+    }
+    
+    .iconjQuerySpan {
+        background-color: #E5A329;
+    }
+    
+    .iconRubySpan {
+        background-color: #D10101;
+    }
+    
+    .blogElementImage svg {
+        fill: currentColor;
+        width: 30px;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+    
+    h5 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        margin-top: 5px;
+        color: #303030;
+        font-family: 'Raleway', sans-serif;
+        line-height: 1.2;
+        font-weight: 100;
+    }
+    
+    .iconAndName {
+        text-align: center;
+    }
+    
+    .iconAndName:hover h5 {
+        color: #d6823a;
+    }
+    
+    .upcomingEvent {
+        margin-left: 80px;
+    }
+    
+    .line1 {
+        width: 40px;
+        height: 4px;
+        background-color: #838c48;
+    }
+    
+    .eventArrowButton{
+        bottom: unset;
+        margin-left: 10px;
+        margin-right: 90px;
+        position: absolute;
+        right: 0;
+        display: block;
+    }
+
+    .eventArrowButton svg {
+        fill: currentColor;
+        height: 1em;
+        width: 1em;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+    
+    .eventButtonLeft{
+        cursor: not-allowed;
+        background-color: transparent;
+        background-image: none !important;
+        color: #303030;
+        display: inline-flex;
+        place-content: center;
+        place-items: center;
+        letter-spacing: 0;
+        height: 40px;
+        line-height: normal;
+        margin: 1px 5px;
+        margin-top: 0px;
+        padding: 0;
+        position: relative;
+        text-decoration: none;
+        text-transform: none;
+        vertical-align: top;
+        width: 40px;
+        z-index: 1;
+        border: 2px solid #303030;
+        transition: all 0.3s linear 0s;
+        font-size: 20px;
+    }
+    
+    .eventButtonLeft:hover{
+        background-color: #838d48;
+        color: #fff;
+    }
+    
+    .eventButtonRight{
+        cursor: not-allowed;
+        background-color: transparent;
+        background-image: none !important;
+        color: #303030;
+        display: inline-flex;
+        place-content: center;
+        place-items: center;
+        letter-spacing: 0;
+        height: 40px;
+        line-height: normal;
+        margin: 1px 5px;
+        margin-top: 0px;
+        padding: 0;
+        position: relative;
+        text-decoration: none;
+        text-transform: none;
+        vertical-align: top;
+        width: 40px;
+        z-index: 1;
+        border: 2px solid #303030;
+        transition: all 0.3s linear 0s;
+        font-size: 20px;
+    }
+    
+    .eventButtonRight:hover{
+        background-color: #838d48;
+        color: #fff;
+    }
+    
+    .colEvent{
+        transform: translate3d(0px, 0px, 0px);
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform;
+    }
+    
+    .eventContent{
+        width: 575px;
+        margin-right: 20px;
+        flex-shrink: 0;
+        height: 100%;
+        position: relative;
+        transition-property: transform;
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .eventContentImage{
+        float: left;
+        width: 30%;
+        margin-right: 30px;
+    }
+    
+    .eventContentImage img{
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        display: inherit;
+        image-rendering: -webkit-optimize-contrast;
+        list-style: none;
+        --widgets-spacing: 20px 20px;
+    }
+    
+    .eventContent h2{
+        margin-top: 0;
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        position: relative;
+        top: -5px;
+        font-family: 'Raleway', sans-serif;
+        color: #303030;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+    
+    .eventContent a{
+        box-shadow: none;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s linear 0s;
+    }
+    
+    .eventContent p{
+        margin-bottom: 5px;
+        color: #808080;
+        font-size: 15px;
+        font-weight: normal;
+    }
+    
+    .colFirst:hover .blogContent{
+        opacity: 1;
+        color: #fdf6ea;
+        transition-duration: 1s;
+    }
+    
+    .colFirst:hover .blogContentParagraph{
+        transform: translateY(-1rem);
+        transition: transform 1s ease;
+    }
+    
+    .colSecond:hover .blogContent{
+        opacity: 1;
+        color: #fdf6ea;
+        transition-duration: 1s;
+    }
+    
+    .colSecond:hover .blogContentParagraph{
+        transform: translateY(-1rem);
+        transition: transform 1s ease;
+    }
+    
+    .colThird:hover .blogContent{
+        opacity: 1;
+        color: #fdf6ea;
+        transition-duration: 1s;
+    }
+    
+    .colThird:hover .blogContentParagraph{
+        transform: translateY(-1rem);
+        transition: transform 1s ease;
+    }
+    
+}
+
+
+
+
