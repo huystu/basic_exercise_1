@@ -3,10 +3,11 @@
         box-sizing: border-box;
         background-color: #fdf6ea;
     }
-    
+
     .container-fluid {
         background-color: #fdf6ea;
     }
+
     .blogTitle {
         font-family: 'Raleway', sans-serif;
         font-weight: 600;
@@ -15,41 +16,42 @@
         font-size: 30px;
         text-align: center;
     }
+
     .line {
         width: 40px;
         height: 4px;
         background-color: #838c48;
         margin: 0 auto;
     }
-    
+
     .wrapper-blog {
         padding-top: 50px;
     }
-    
+
     .blogImageAndContent {
         width: 270.5px;
         float: left;
         overflow: hidden;
         position: relative;
     }
-    
+
     .blogImageAndContent:hover .blogContent {
         opacity: 1;
         color: #fdf6ea;
         transition-duration: 1s;
     }
-    
+
     .blogImageAndContent:hover .blogImage1 {
         transform: scale(1.10);
         transform-origin: top left;
         transition-duration: 1s;
     }
-    
+
     .blogImageAndContent:hover .blogContentParagraph {
         transform: translateY(-1rem);
         transition: transform 0.2s ease;
     }
-    
+
     .blogImage1 {
         width: 100%;
         float: left;
@@ -59,7 +61,7 @@
         transform: scale(1.20);
         transition-duration: 1s;
     }
-    
+
     .blogContent {
         position: absolute;
         opacity: 0;
@@ -78,24 +80,24 @@
         padding-top: 20%;
         transition: opacity 1s ease;
     }
-    
+
     .blogImageAndContent .blogContentParagraph {
         transform: translateY(1rem);
         transition: transform 1s ease;
     }
-    
+
     .blogContentParagraph {
         background: transparent;
         line-height: 1.5;
         font-size: 15px;
     }
-    
+
     .blogDate {
         border: 2px solid #201c1d;
         border-radius: 3px 3px 3px 3px;
         margin-top: 30px;
     }
-    
+
     .blogDateContent {
         font-size: 17px;
         font-weight: 600;
@@ -105,7 +107,7 @@
         height: fit-content;
         margin-bottom: 0.5rem;
     }
-    
+
     .icon-format {
         height: auto;
         width: 100%;
@@ -120,18 +122,18 @@
         border-top: 2px solid #303030;
         width: auto;
     }
-    
+
     .icon-format:hover {
         color: #d6823a;
     }
-    
+
     .blogGroup {
         margin-top: 30px;
         color: #808080;
         font-size: 14px;
         font-weight: normal;
     }
-    
+
     .blogGroupTitle {
         width: auto;
         display: inline-block;
@@ -151,11 +153,11 @@
         margin-right: 18%;
         margin-bottom: 3%;
     }
-    
+
     .blogGroupTitle:hover .blogGroupTitleLink {
         color: #de8235;
     }
-    
+
     .blogGroupTitleLink {
         color: #303030;
         font-weight: 600;
@@ -166,7 +168,7 @@
         box-shadow: none;
         transition: all 0.3s linear 0s;
     }
-    
+
     .blogGroupAuthor {
         color: #808080;
         font-size: 15px;
@@ -175,11 +177,11 @@
         box-shadow: none;
         transition: all 0.3s linear 0s;
     }
-    
+
     .blogGroupAuthor:hover {
         color: #de8235;
     }
-    
+
     .blogGroupTag {
         position: relative;
         font-weight: 600;
@@ -189,11 +191,11 @@
         word-break: break-all;
         transition: all 0.3s linear 0s;
     }
-    
+
     .bi-bookmark-fill {
         font-size: 11px;
     }
-    
+
     .tag1 .tag2 {
         color: #808080;
         font-size: 14px;
@@ -202,29 +204,29 @@
         white-space: nowrap;
         transition: all 0.3s linear 0s;
     }
-    
+
     .tag1 {
         text-decoration: none;
         color: #808080;
         font-size: 14px;
         font-weight: normal;
     }
-    
+
     .tag1:hover {
         color: #de8235;
     }
-    
+
     .tag2 {
         text-decoration: none;
         color: #808080;
         font-size: 14px;
         font-weight: normal;
     }
-    
+
     .tag2:hover {
         color: #de8235;
     }
-    
+
     .blogGroupTitle1 {
         width: auto;
         display: inline-block;
@@ -244,39 +246,85 @@
         margin-right: 15%;
         margin-bottom: 3%;
     }
-    
+
     .blogGroupTitle1:hover .blogGroupTitleLink {
         color: #de8235;
     }
 
     @media only screen and (max-width: 600px) {
-       .blogImageAndContent{
-        width: 320px;
-        height: 265px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-       }
-      }
-    
+        .colFirst .blogImageAndContent {
+            width: 320px;
+            height: 265px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .colFirst .blogGroupTitle {
+            margin-right: 0;
+        }
+
+        .colSecond .blogImageAndContent {
+            width: 320px;
+            height: 265px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-left: 20px;
+        }
+
+        .rowSecond .blogDate {
+            margin-left: 20px;
+            margin-right: -20px;
+        }
+
+        .rowSecond .blogGroup {
+            margin-left: 20px;
+            margin-right: -70px;
+        }
+
+        .colThird .blogImageAndContent {
+            width: 320px;
+            height: 265px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-left: 60px;
+        }
+
+        .rowThird .blogDate {
+            margin-left: 60px;
+            margin-right: -60px;
+        }
+
+        .rowThird .blogGroup {
+            margin-left: 60px;
+            margin-right: -60px;
+        }
+    }
+
     .colFirst {
         margin-left: 5%;
         margin-right: -40px;
     }
-    
+
     .colThird {
         margin-left: -40px;
     }
-    
+
     .blogElementImage {
         background-image: url(https://dtlmselementor.wpengine.com/wp-content/uploads/2023/11/parallax-light.jpg);
         background-size: cover;
         background-position: center;
         padding: 100px 0px 100px 0px;
     }
-    
+
     .blogElement {
         max-width: 1170px;
         display: flex;
@@ -284,7 +332,7 @@
         margin-left: auto;
         position: relative;
     }
-    
+
     .blogIconElement {
         background: transparent;
         border: 0;
@@ -294,11 +342,11 @@
         padding: 0;
         vertical-align: baseline;
     }
-    
+
     .iconAndName {
         position: relative;
     }
-    
+
     .blogIconElement span {
         width: 90px;
         height: 90px;
@@ -315,39 +363,40 @@
         vertical-align: top;
         z-index: 0;
     }
-    
+
     .iconHTMLSpan {
         background-color: #F2672E;
     }
-    
-    
+
+
     .iconCSSSpan {
         background-color: #0171BB;
     }
-    
+
     .iconAndroidSpan {
         background-color: #9FBF3A;
     }
-    
+
     .iconPhotoshopSpan {
         background-color: #2B8BC0;
     }
-    
+
     .iconjQuerySpan {
         background-color: #E5A329;
     }
-    
+
     .iconRubySpan {
         background-color: #D10101;
     }
-    
+
     .blogElementImage svg {
         fill: currentColor;
-        width: 32px;
+        height: 1em;
+        width: 1em;
         overflow: hidden;
         vertical-align: middle;
     }
-    
+
     h5 {
         margin-bottom: 10px;
         font-size: 20px;
@@ -358,26 +407,26 @@
         line-height: 1.2;
         font-weight: 100;
     }
-    
+
     .iconAndName {
         text-align: center;
     }
-    
+
     .iconAndName:hover h5 {
         color: #d6823a;
     }
-    
+
     .upcomingEvent {
         margin-left: 80px;
     }
-    
+
     .line1 {
         width: 40px;
         height: 4px;
         background-color: #838c48;
     }
-    
-    .eventArrowButton{
+
+    .eventArrowButton {
         bottom: unset;
         margin-left: 10px;
         margin-right: 90px;
@@ -393,8 +442,8 @@
         overflow: hidden;
         vertical-align: middle;
     }
-    
-    .eventButtonLeft{
+
+    .eventButtonLeft {
         cursor: not-allowed;
         background-color: transparent;
         background-image: none !important;
@@ -418,13 +467,13 @@
         transition: all 0.3s linear 0s;
         font-size: 20px;
     }
-    
-    .eventButtonLeft:hover{
+
+    .eventButtonLeft:hover {
         background-color: #838d48;
         color: #fff;
     }
-    
-    .eventButtonRight{
+
+    .eventButtonRight {
         cursor: not-allowed;
         background-color: transparent;
         background-image: none !important;
@@ -448,13 +497,13 @@
         transition: all 0.3s linear 0s;
         font-size: 20px;
     }
-    
-    .eventButtonRight:hover{
+
+    .eventButtonRight:hover {
         background-color: #838d48;
         color: #fff;
     }
-    
-    .colEvent{
+
+    .colEvent {
         transform: translate3d(0px, 0px, 0px);
         position: relative;
         width: 100%;
@@ -463,8 +512,8 @@
         display: flex;
         transition-property: transform;
     }
-    
-    .eventContent{
+
+    .eventContent {
         width: 575px;
         margin-right: 20px;
         flex-shrink: 0;
@@ -475,14 +524,14 @@
         margin-top: 50px;
         margin-bottom: 50px;
     }
-    
-    .eventContentImage{
+
+    .eventContentImage {
         float: left;
         width: 30%;
         margin-right: 30px;
     }
-    
-    .eventContentImage img{
+
+    .eventContentImage img {
         height: auto;
         max-width: 100%;
         border: none;
@@ -493,8 +542,8 @@
         list-style: none;
         --widgets-spacing: 20px 20px;
     }
-    
-    .eventContent h2{
+
+    .eventContent h2 {
         margin-top: 0;
         font-size: 20px;
         line-height: 32px;
@@ -507,56 +556,52 @@
         letter-spacing: 0;
         text-transform: none;
     }
-    
-    .eventContent a{
+
+    .eventContent a {
         box-shadow: none;
         text-decoration: none;
         color: inherit;
         transition: all 0.3s linear 0s;
     }
-    
-    .eventContent p{
+
+    .eventContent p {
         margin-bottom: 5px;
         color: #808080;
         font-size: 15px;
         font-weight: normal;
     }
-    
-    .colFirst:hover .blogContent{
+
+    .colFirst:hover .blogContent {
         opacity: 1;
         color: #fdf6ea;
         transition-duration: 1s;
     }
-    
-    .colFirst:hover .blogContentParagraph{
+
+    .colFirst:hover .blogContentParagraph {
         transform: translateY(-1rem);
         transition: transform 1s ease;
     }
-    
-    .colSecond:hover .blogContent{
+
+    .colSecond:hover .blogContent {
         opacity: 1;
         color: #fdf6ea;
         transition-duration: 1s;
     }
-    
-    .colSecond:hover .blogContentParagraph{
+
+    .colSecond:hover .blogContentParagraph {
         transform: translateY(-1rem);
         transition: transform 1s ease;
     }
-    
-    .colThird:hover .blogContent{
+
+    .colThird:hover .blogContent {
         opacity: 1;
         color: #fdf6ea;
         transition-duration: 1s;
     }
-    
-    .colThird:hover .blogContentParagraph{
+
+    .colThird:hover .blogContentParagraph {
         transform: translateY(-1rem);
         transition: transform 1s ease;
     }
-    
+
 }
-
-
-
-
