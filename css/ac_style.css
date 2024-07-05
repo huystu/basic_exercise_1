@@ -1,3 +1,10 @@
+.container-course-implement {
+  display: flex;
+  justify-content: center;
+  width: 1180px;
+  margin: 0 auto;
+}
+
 #main {
   clear: both;
   display: block;
@@ -7,7 +14,9 @@
   width: 100%;
 }
 
-section {
+.for-course,
+.first-place,
+.third-place {
   unicode-bidi: isolate;
   border: 0;
   font-size: 100%;
@@ -17,6 +26,68 @@ section {
   vertical-align: baseline;
 }
 
+.button-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.btn-back-top .Btop {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #838c48;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 3px;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-back-top .Btop:hover {
+  background-color: #000000;
+  transform: rotate(360deg) scale(1.1);
+}
+
+.button-top.show {
+  opacity: 1;
+}
+
+.arrow-top {
+  border: solid rgb(255, 255, 255);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.arrow-course {
+  border: solid rgb(0, 0, 0);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
 div.first-place {
   height: 230px;
 }
@@ -24,8 +95,6 @@ div.first-place {
 div.four-skills {
   display: flex;
   justify-content: space-between;
-  padding-left: 165px;
-  padding-right: 165px;
   margin-top: 100px;
 }
 
@@ -82,13 +151,23 @@ div.button-pn {
   display: flex;
   justify-content: space-between;
   width: 100px;
-  height: 45px;
+  height: 46px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
 
-div.btn-prev,
-div.btn-next {
+.section-for-course {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-prev,
+.btn-next {
   width: 45px;
   height: 45px;
   text-align: center;
@@ -96,9 +175,11 @@ div.btn-next {
   align-items: center;
 }
 
-a.Bprev,
-a.Bnext {
-  display: block;
+.Bprev,
+.Bnext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 45px;
   height: 45px;
   background-color: #fdf6ea;
@@ -114,8 +195,8 @@ a.Bnext {
   transition: background-color 0.5s, color 0.5s, border 0.5s;
 }
 
-a.Bprev:hover,
-a.Bnext:hover {
+.Bprev:hover,
+.Bnext:hover {
   background-color: #838c48;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -157,8 +238,6 @@ div.second-place {
 
 div.all-course {
   margin-top: 50px;
-  padding-left: 165px;
-  padding-right: 165px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
@@ -542,7 +621,7 @@ div.duration {
 }
 
 div.img-clock {
-  width: 117px;
+  width: 157px;
   height: 28px;
   display: flex;
   align-items: center;
@@ -606,8 +685,6 @@ span.hiden-star {
 div.swiper-slide {
   display: flex;
   justify-content: space-between;
-  padding-left: 165px;
-  padding-right: 165px;
 }
 
 img.img-swiper {
@@ -719,6 +796,10 @@ img.img-swiper {
 
 /* Media queries for responsive behavior */
 @media (max-width: 795px) {
+  .container-course-implement {
+    width: 100%;
+  }
+
   h5 {
     font-size: 16px;
     margin-block-start: 1.67em;
@@ -797,7 +878,7 @@ img.img-swiper {
     text-align: center;
     display: flex;
     justify-content: space-between;
-    width: 100px;
+    width: 105px;
     height: 45px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -852,22 +933,28 @@ img.img-swiper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Điều chỉnh kích thước view-course */
-    height: auto; /* Điều chỉnh kích thước view-course */
-    overflow: hidden; /* Đảm bảo chỉ hiển thị một swiper-slide */
+    width: 100%;
+    height: auto;
+    overflow: hidden;
   }
 
   div.swiper-slide {
-    width: 347px; /* Điều chỉnh kích thước swiper-slide */
-    height: 173px; /* Điều chỉnh kích thước swiper-slide */
+    width: 347px;
+    height: 173px;
     display: flex;
     padding-left: 5px;
     padding-right: 5px;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  div.swiper-slide::-webkit-scrollbar {
+    display: none;
   }
 
   img.img-swiper {
-    width: 347px; /* Điều chỉnh kích thước img-swiper */
-    height: 173px; /* Điều chỉnh kích thước img-swiper */
+    width: 347px;
+    height: 173px;
   }
 }

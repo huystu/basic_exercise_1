@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
+  /* Hiệu ứng cho nút Back to Top */
+  const backToTopButton = document.querySelector('.button-top');
+
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 100) {
+      backToTopButton.classList.add('show');
+    } else {
+      backToTopButton.classList.remove('show');
+    }
+  });
+
+  document
+    .querySelector('.btn-back-top .Btop')
+    .addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+
   /* Hiệu ứng cho bốn skill */
   const icons = document.querySelectorAll('.txt-icon');
 
